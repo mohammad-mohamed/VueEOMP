@@ -1,5 +1,5 @@
 <template>
-    <footer class="container-fluid">
+    <footer class="footer">
         <div class="row">
             <p class="lead">Mohammad Mohamed &copy; <span class="shadow">{{ aYear }}</span></p>
         </div>
