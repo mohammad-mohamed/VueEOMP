@@ -2,7 +2,18 @@
   <router-view/>
   
 </template>
-
+<script>
+export default{
+  computed:{
+         getAbout(){
+            return this.$store.dispatch('getAbout')
+     },
+     },
+     mounted(){
+         this.getAbout
+     },
+}
+</script>
 <style src="@/assets/css/style.css">
 /* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

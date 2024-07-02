@@ -5,6 +5,10 @@
     <section id="home">
         <HomeSection/>
       </section>
+      <section id="about">
+        <AboutSection :aboutMe="aboutMe"/>
+
+      </section>
     <Footer/>
   </div>
 </template>
@@ -14,6 +18,8 @@
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
 import HomeSection from '@/components/HomeSection.vue'
+import AboutSection from '@/components/AboutSection.vue'
+
 
 export default {
   name: 'HomeView',
@@ -21,6 +27,13 @@ export default {
     NavBar,
     Footer,
     HomeSection,
+    AboutSection
+  },
+  computed:{
+  
+  },
+  mounted(){
+  
   }
 }
 </script>
