@@ -1,18 +1,18 @@
 
 import { createStore } from 'vuex'
-
+import axios from 'axios'
 // state.data = 'something' //<--- this is wrong
 export default createStore({
   //variables
   state: {
     // data -> propertyName, null -> value
-    experince: null,
-    education: null,
-    aboutMe: null,
-    workExp: null,
-    projects: null,
-    testimonial: null,
-    skills: null,
+    experince: [],
+    education: [],
+    aboutMe: [],
+    workExp: [],
+    projects: [],
+    testimonial: [],
+    skills: [],
   },
   mutations: {
     // use this to change or update the state
@@ -23,8 +23,8 @@ export default createStore({
     updateEducation(state, payload) {
       state.education = payload // <---- this is right
     },    
-    updateAboutMe(state, payload) {
-      state.aboutMe = payload // <---- this is right
+    setAboutMe(state, about) {
+      state.aboutMe = about // <---- this is right
     },    
     updateWorkExp(state, payload) {
       state.workExp = payload // <---- this is right
@@ -51,21 +51,27 @@ export default createStore({
     // }
 
     // ^ these are just syntax ^
-
-    async getAboutMe({commit}){
-      let fetchedInfo = await fetch('https://mohammad-mohamed.github.io/first-api/data/')
-      let {data} = await fetchedInfo.json()
-      // dependant on json file
-      let {aboutMe,projects,testimonial,skills,education,workExp,experince} = data
-      console.log(data)
-      commit('setAboutMe',aboutMe)
-      commit('updateProjects',projects)
-      commit('setTestimonial',testimonial)
-      commit('setSkills',skills)
-      commit('setEducation',education)
-      commit('setWorkExp',workExp)
-      commit('setExperince',experince)
+    async getAbout(context){
+      await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+      .then (res => {
+        context.commit('setAboutMe', res.data.aboutMe)
+      })
     }
+
+    // async getAboutMe({commit}){
+    //   let fetchedInfo = await fetch('https://mohammad-mohamed.github.io/first-api/data/')
+    //   let {data} = await fetchedInfo.json()
+    //   // dependant on json file
+    //   let {aboutMe,projects,testimonial,skills,education,workExp,experince} = data
+    //   console.log(data)
+    //   commit('setAboutMe',aboutMe)
+    //   commit('updateProjects',projects)
+    //   commit('setTestimonial',testimonial)
+    //   commit('setSkills',skills)
+    //   commit('setEducation',education)
+    //   commit('setWorkExp',workExp)
+    //   commit('setExperince',experince)
+    // }
   },
   modules: {
   },

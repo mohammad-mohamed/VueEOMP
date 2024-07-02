@@ -29,8 +29,8 @@ section {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color:  rgb(29, 29, 29) ;
-    background-color: black; /* Dark gray background */
+    color:  rgb(255, 255, 255) ;
+     background-color: black; /*Dark gray background */
 }
 
 .nav {
@@ -139,21 +139,141 @@ margin-bottom: 120px;
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  /* to { width: 100% } */
 }
 .typewriter {
   display: inline-block;
   overflow: hidden;
-  border-right: .15em solid gray;
+  /* border-right: .15em solid gray; */
   white-space: nowrap;
   margin: 0 auto;
   padding: 0 10px;
-  animation: typing 5s steps(80, end), blink-caret .75s infinite;
+  width: 100%;
+  animation: typing 5s steps(80), cursor 0.4s step-end infinite alternate;
 }
-@keyframes blink-caret {
-  from, to { border-color: transparent }
+@keyframes cursor {
+  /* from, to { border-color: transparent } */
   50% { border-color: transparent }
 }
+
+
+/* about me */
+.about-me-title {
+    background: linear-gradient(180deg, #9360ff 0%, #8f1dd5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 102%;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .about-me-description {
+    color: #c5c5c5;
+    letter-spacing: 0.36px;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+  }
+  
+    /* .about-me-details-label,
+    .about-me-details-value {
+      color: #c5c5c5;
+      letter-spacing: 0.36px;
+      font-weight: 300;
+      font-size: 18px;
+      font-family: Poppins, sans-serif;
+    } */
+    
+    .about-me-actions {
+      font-size: 21px;
+      font-weight: 600;
+    }
+    
+    .about-me-contact-btn {
+      -webkit-text-stroke-width: 0.3246873915195465;
+      -webkit-text-stroke-color: #fff;
+      font-family: Poppins, sans-serif;
+      border: 1px solid #fff;
+      border-radius: 50px;
+      background: linear-gradient(0deg, #fff 0%, #fff 100%), #fff;
+      color: #161513;
+      justify-content: center;
+      padding: 24px 30px;
+    }
+    
+    .about-me-download-btn {
+      -webkit-text-stroke-width: 0.3246873915195465;
+      -webkit-text-stroke-color: #000;
+      font-family: Poppins, sans-serif;
+      border-radius: 50px;
+      border: 2px solid #fff;
+      color: #fff;
+      justify-content: center;
+      padding: 24px 28px;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: .15em solid gray;
+      white-space: nowrap;
+      margin: 0 auto;
+      padding: 0 10px;
+      animation: typing 5s steps(80, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: transparent }
+    }
+  #textss>p{
+    color: #c5c5c5;
+  }
+  
+  /* .about-me-details-label,
+  .about-me-details-value {
+    color: #c5c5c5;
+    letter-spacing: 0.36px;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+  } */
+  
+  .about-me-actions {
+    font-size: 21px;
+    font-weight: 600;
+  }
+  
+  .about-me-contact-btn {
+    -webkit-text-stroke-width: 0.3246873915195465;
+    -webkit-text-stroke-color: #fff;
+    font-family: Poppins, sans-serif;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: linear-gradient(0deg, #fff 0%, #fff 100%), #fff;
+    color: #161513;
+    justify-content: center;
+    padding: 24px 30px;
+  }
+  
+  .about-me-download-btn {
+    -webkit-text-stroke-width: 0.3246873915195465;
+    -webkit-text-stroke-color: #000;
+    font-family: Poppins, sans-serif;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    justify-content: center;
+    padding: 24px 28px;
+  }
+  
+  #about{
+    margin-bottom: 120px;
+  }
 
 
 .footer {
