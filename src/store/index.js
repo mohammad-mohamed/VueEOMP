@@ -15,64 +15,102 @@ export default createStore({
     skills: [],
   },
   mutations: {
-    // use this to change or update the state
-    
-    updateExperince(state, payload) {
-      state.experince = payload // <---- this is right
-    },    
-    updateEducation(state, payload) {
-      state.education = payload // <---- this is right
-    },    
-    setAboutMe(state, about) {
-      state.aboutMe = about // <---- this is right
-    },    
-    updateWorkExp(state, payload) {
-      state.workExp = payload // <---- this is right
-    },    
-    updateProjects(state, payload) {
-      state.projects = payload // <---- this is right
-    },    
-    updateTestimonial(state, payload) {
-      state.testimonial = payload // <---- this is right
+    setHome(state, data) {
+      state.home = data;
     },
-    updateSkills(state, payload) {
-      state.skills = payload // <---- this is right
+    setAboutMe(state, about) {
+      state.aboutMe = about;
+    },
+    setResume(state, resume) {
+      state.resume = resume;
+    },
+    setSkills(state, skills) {
+      state.skills = skills;
+    },
+    setProjects(state, projects) {
+      state.projects = projects;
+    },
+    setTestimonials(state, testimonials) {
+      state.testimonials = testimonials;
+    },
+    setContact(state, contact) {
+      state.contact = contact;
     }
-   
-    //commiting a mutation
-
   },
+
   actions: {
-    // run all async code
-    // dispatching
-
-    // fetchData(commit){
-    //   commit
-    // }
-
-    // ^ these are just syntax ^
-    async getAbout(context){
+    async getHome(context) {
+      try {
+        await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+          .then(res => {
+            context.commit('setHome', res.data.home);
+          });
+      } catch (error) {
+        alert('Cannot retrieve home data:', error);
+      }
+    },
+    async getAbout(context) {
+      try {
       await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
       .then (res => {
         context.commit('setAboutMe', res.data.aboutMe)
-      })
+          });
+      } catch (error) {
+        alert('Cannot retrieve about data:', error);
+      }
+    },
+    async getResume(context) {
+      try {
+        await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+          .then(res => {
+            context.commit('setResume', res.data.resume);
+          });
+      } catch (error) {
+        alert('Cannot retrieve resume data:', error);
+      }
+    },
+    async getSkills(context) {
+      try {
+        await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+          .then(res => {
+            context.commit('setSkills', res.data.skills);
+          });
+      } catch (error) {
+        alert('Cannot retrieve skills data:', error);
+      }
+    },
+    async getProjects(context) {
+      try {
+        await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+          .then(res => {
+            context.commit('setProjects', res.data.projects);
+          });
+      } catch (error) {
+        alert('Cannot retrieve projects data:', error);
+      }
+    },
+    async getTestimonials(context) {
+      try {
+        await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+          .then(res => {
+            context.commit('setTestimonials', res.data.testimonials);
+          });
+      } catch (error) {
+        alert('Cannot retrieve testimonials data:', error);
+      }
+    },
+    async getContact(context) {
+      try {
+        await axios.get('https://mohammad-mohamed.github.io/first-api/data/')
+          .then(res => {
+            context.commit('setContact', res.data.contact);
+          });
+      } catch (error) {
+        alert('Cannot retrieve contact data:', error);
+      }
     }
-
-    // async getAboutMe({commit}){
-    //   let fetchedInfo = await fetch('https://mohammad-mohamed.github.io/first-api/data/')
-    //   let {data} = await fetchedInfo.json()
-    //   // dependant on json file
-    //   let {aboutMe,projects,testimonial,skills,education,workExp,experince} = data
-    //   console.log(data)
-    //   commit('setAboutMe',aboutMe)
-    //   commit('updateProjects',projects)
-    //   commit('setTestimonial',testimonial)
-    //   commit('setSkills',skills)
-    //   commit('setEducation',education)
-    //   commit('setWorkExp',workExp)
-    //   commit('setExperince',experince)
-    // }
   },
+
   modules: {
   },
   getters: {
