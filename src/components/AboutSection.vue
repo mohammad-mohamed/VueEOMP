@@ -45,23 +45,15 @@
   
   <script>
   export default {
-    name: 'AboutSection',
-    // computed: {
-    //   aboutMe() {
-    //     return this.$store.state.aboutMe //? this.$store.state.aboutMe[0] : {};
-    //   }
-    // },
-    // mounted() {
-    //   this.$store.dispatch('getAboutMe');
-    // }
-   
-    
-    props: {
-        aboutMe: {
-            type: Array,
-            required: true
-        }
-    }
+    computed:{
+         getAbout(){
+            return this.$store.dispatch('getAbout')
+     },
+     },
+     mounted(){
+         this.getAbout
+     },
+
   }
   </script>
   
