@@ -12,6 +12,9 @@
       <section id="resume">
         <ResumeSection/>
       </section>
+      <section id="testimonial">
+        <TestimonialSection/>
+      </section>
     <Footer/>
   <!-- </section> -->
   </div>
@@ -24,6 +27,7 @@ import Footer from '@/components/Footer.vue'
 import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
+import TestimonialSection from '@/components/TestimonialSection.vue'
 
 
 export default {
@@ -33,7 +37,8 @@ export default {
     Footer,
     HomeSection,
     AboutSection,
-    ResumeSection
+    ResumeSection,
+    TestimonialSection
   },
   computed:{
   

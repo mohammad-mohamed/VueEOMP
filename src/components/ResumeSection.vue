@@ -1,7 +1,7 @@
 <template>
     <section>
       <!-- Education Section -->
-      <section class="education-section">
+      <section id="resume" class="education-section">
         <h2 class="education-title" id="text-glow5">Education</h2>
         <article class="education-item" v-for="education in $store.state.resume" :key="education">
           <h3 class="education-degree">{{ education.degree }}</h3>
