@@ -20,8 +20,8 @@
       <section id="contact">
         <ContactSection/>
       </section>
+      <FooterComp/>
       <SpinnerComp/>  
-      <Footer/>
     </div>
   </div>
 </template>
@@ -30,7 +30,7 @@
 <script>
 // @ is an alias to /src
 import NavBar from '@/components/NavBar.vue'
-import Footer from '@/components/Footer.vue'
+import FooterComp from '@/components/Footer.vue'
 import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
@@ -44,7 +44,7 @@ export default {
   name: 'HomeView',
   components: {
     NavBar,
-    Footer,
+    FooterComp,
     HomeSection,
     AboutSection,
     ResumeSection,
@@ -83,7 +83,7 @@ body {
   max-width: 1200px; /* Adjust the width as needed */
   margin: 0 auto;
   padding: 0 20px; /* Adjust the padding as needed */
-  box-shadow: 0 0 0 10px black;
+  /* box-shadow: 0 0 0 10px black; */
 }
 
 /* Content section styles */
@@ -96,20 +96,11 @@ section {
 }
 
 /* Additional styles for the components */
-.navbar, .footer {
+/* Ensure the navbar and footer are within the wrapper */
+.navbar {
+  box-shadow: 0px -20px 0px 20px rgb(9, 9, 9);
   background-color: gray;
   padding: 20px;
 }
-
-/* Ensure the navbar and footer are within the wrapper */
-.navbar {
-  box-shadow: 0 0 0 10px black;
-}
-
-.footer {
-  box-shadow: 0 0 0 10px black;
-}
-
-
 </style>
 

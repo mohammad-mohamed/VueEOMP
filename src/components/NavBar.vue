@@ -1,7 +1,9 @@
 <template >
     <nav class="navbar navbar-dark sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand hometext" href="#">CO</a>
+        <a class="navbar-brand hometext" href="#">
+          <img src="https://mohammad-mohamed.github.io/hostedImages/images/Portfolio/Logos/M_M.png" alt="Logo" class="navbar-brand" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -60,5 +62,11 @@
   export default {
     
   };
-  </script>
-  <style scoped></style>
+</script>
+<style scoped>
+
+.navbar-brand{
+  width: 50px;
+}
+
+</style>
