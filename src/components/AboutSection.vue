@@ -1,5 +1,5 @@
 <template>
-    <section class="about-me py-5 mt-5">
+    <section class="about-me py-5 mt-5" v-if="$store.state.aboutMe.length > 0">
       <div class="container" v-for="about in $store.state.aboutMe" :key="about">
         <div class="row">
           <div class="col-12 text-center">
@@ -41,10 +41,17 @@
         </div>
       </div>
     </section>
+    <section v-else>
+      <SpinnerComp/>
+    </section>
   </template>
   
   <script>
+  import SpinnerComp from '@/components/SpinnerComp.vue'
   export default {
+    components:{
+      SpinnerComp
+    },    
     computed:{
          getAbout(){
             return this.$store.dispatch('getAbout')

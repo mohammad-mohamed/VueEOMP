@@ -124,6 +124,7 @@ body {
   background: linear-gradient(138deg, #FF8660 9.86%, #8000FF 104.95%);
   padding-bottom: 10px;
   aspect-ratio: 1;
+  z-index: 1;
 }
 .img-container img {
   aspect-ratio: 1;

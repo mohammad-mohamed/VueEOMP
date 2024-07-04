@@ -1,27 +1,37 @@
 <template lang="">
+  <section v-if="$store.state.aboutMe.length > 0">
     <div id="testimonial" class="testimonials">
-        <h1 class="testheader text-uppercase fw-bold-semi">Testimonial</h1>
-        <section class="testimon container">
-          <div class="card row" v-for="testimonial in $store.state.testimonials" :key="testimonial">
-            <div class="poster">
-              <img :src= testimonial.profile alt="" />
-            </div>
-            <div class="details">
-              <h1 class="testname1">{{testimonial.name}} {{testimonial.surname}}</h1>
-              <div class="info">
-                <p>
-                 {{testimonial.quotes}}
-                </p>
-              </div>
-            </div>
+    <h1 class="testheader text-uppercase fw-bold-semi">Testimonial</h1>
+    <section class="testimon container">
+      <div class="card row" v-for="testimonial in $store.state.testimonials" :key="testimonial">
+        <div class="poster">
+          <img :src= testimonial.profile alt="" />
+        </div>
+        <div class="details">
+          <h1 class="testname1">{{testimonial.name}} {{testimonial.surname}}</h1>
+          <div class="info">
+            <p>
+             {{testimonial.quotes}}
+            </p>
           </div>
-        </section>
-    </div>
-    <div class="spacer"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="spacer"></div>
+  </section>
+  <section v-else>
+      <SpinnerComp/>
+  </section>
+    
   </template>
   <script>
   
+  import SpinnerComp from '@/components/SpinnerComp.vue'
   export default {
+    components:{
+      SpinnerComp
+    },
     computed:{
         getTestimonials(){
             return this.$store.dispatch('getTestimonials')

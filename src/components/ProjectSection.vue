@@ -1,5 +1,5 @@
 <template>
-    <section id="projects">
+    <section id="projects" v-if="$store.state.projects.length > 0">
       <h2 class="projects-heading">Projects</h2>
       
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -57,10 +57,17 @@
         </button>
       </div>
     </section>
+    <section v-else>
+      <SpinnerComp/>
+    </section>
   </template>
   
   <script>
+  import SpinnerComp from '@/components/SpinnerComp.vue'
   export default {
+    components:{
+      SpinnerComp
+    },
     computed: {
       getProjects() {
         return this.$store.dispatch('getProjects');
