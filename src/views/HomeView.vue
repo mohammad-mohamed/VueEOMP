@@ -18,6 +18,9 @@
       <section id="testimonial">
         <TestimonialSection/>
       </section>
+      <section>
+        <ContactSection/>
+      </section>
     <Footer/>
   <!-- </section> -->
   </div>
@@ -32,6 +35,7 @@ import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
 import TestimonialSection from '@/components/TestimonialSection.vue'
 import ProjectSection from '@/components/ProjectSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
 
 
 export default {
@@ -43,7 +47,8 @@ export default {
     AboutSection,
     ResumeSection,
     TestimonialSection,
-    ProjectSection
+    ProjectSection,
+    ContactSection
   },
   computed:{
   
