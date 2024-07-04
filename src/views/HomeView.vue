@@ -9,6 +9,9 @@
       <section id="about">
         <AboutSection :aboutMe="aboutMe"/>
       </section>
+      <section>
+        <ProjectSection/>
+      </section>
       <section id="resume">
         <ResumeSection/>
       </section>
@@ -28,6 +31,7 @@ import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
 import TestimonialSection from '@/components/TestimonialSection.vue'
+import ProjectSection from '@/components/ProjectSection.vue'
 
 
 export default {
@@ -38,7 +42,8 @@ export default {
     HomeSection,
     AboutSection,
     ResumeSection,
-    TestimonialSection
+    TestimonialSection,
+    ProjectSection
   },
   computed:{
   
