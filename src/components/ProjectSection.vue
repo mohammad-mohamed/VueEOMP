@@ -26,12 +26,6 @@
                   <image :xlink:href="project.images" height="100%" width="100%" />
                 </svg>
                 <div class="card-body bg-secondary">
-                  <!-- Star ratings and project name -->
-                  <i class="fa-solid fa-star text-warning"></i>
-                  <i class="fa-solid fa-star text-warning"></i>
-                  <i class="fa-solid fa-star text-warning"></i>
-                  <i class="fa-regular fa-star text-warning"></i>
-                  <i class="fa-regular fa-star text-warning"></i>
                   <p class="card-text">{{ project.name }}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <!-- Buttons for Vercel and GitHub -->
