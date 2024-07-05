@@ -126,31 +126,10 @@ body {
   width: 60px;
 }
 
-/* home */
-.gradient-text {
-  background: linear-gradient(138deg, #ff8660 15%, #8000ff 104.95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.img-container {
-  background: linear-gradient(138deg, #FF8660 9.86%, #8000FF 104.95%);
-  padding-bottom: 10px;
-  aspect-ratio: 1;
-  z-index: 1;
-}
-.img-container img {
-  aspect-ratio: 1;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-#land{
+/* #land{
 margin-top: 130px;
 margin-bottom: 120px;
-}
+} */
 
 @keyframes typing {
   from { width: 0 }
@@ -306,7 +285,7 @@ margin-bottom: 120px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     align-self: center;
-    font: 800 35px/102% Poppins, sans-serif;
+    font: 700 25px/102% Poppins, sans-serif;
   }
   
   .education-item {

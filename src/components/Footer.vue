@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="footer-content">
-            <p class="lead">Mohammad Mohamed &copy; <span class="shadow">{{ aYear }}</span></p>
+            <p class="lead">All Rights Reserved | Mohammad Mohamed | &copy; <span class="shadow">{{ aYear }}</span></p>
         </div>
     </footer>
 </template>
@@ -47,6 +47,7 @@ export default {
 .footer {
   box-shadow: 0px -20px 0px 20px rgb(9, 9, 9);
   background-color: rgb(9, 9, 9);;
-  padding: 20px;
+  padding: 40px;
+
 }
 </style>

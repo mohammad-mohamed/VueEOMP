@@ -2,6 +2,7 @@
   <section>
     <!-- Education Section -->
     <section id="resume" class="education-section" v-if="$store.state.resume && $store.state.resume.length > 0">
+      <h1 class="education-title-2">Resume</h1>
       <h2 class="education-title" id="text-glow5">Education</h2>
       <article class="education-item" v-for="education in $store.state.resume" :key="education">
         <h3 class="education-degree">{{ education.degree }}</h3>
@@ -50,6 +51,17 @@
 
 <style>
 
+.education-title-2{
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ff5b5b 0%, #d11313 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: center;
+    font: 800 35px/102% Poppins, sans-serif;
+    margin-bottom: -30px;
+}
+
 .theSk {
   display: flex;
   justify-content: center;
@@ -59,13 +71,13 @@
 
 .resumeW{
     text-transform: uppercase;
-  background: linear-gradient(90deg, #2df872 0%, #0fc000 100%);
+    background: linear-gradient(180deg, #ff5b5b 0%, #d11313 100%);
   background-clip: text;
   text-align: center;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font: 800 35px/102% Poppins, sans-serif;
+  font: 700 25px/102% Poppins, sans-serif;
 }
 
 .imgIcon {

@@ -70,17 +70,19 @@ export default {
 }
 #projects{
   background-color: rgb(31, 31, 31);
+  padding-top: 50px
 }
 #resume{
   background-color: rgb(31, 31, 31);
-
+  padding-top: 50px
 }
 #testimonial{
   background-color: rgb(31, 31, 31);
-
+  padding-top: 50px
 }
 #contact{
   background-color: rgb(31, 31, 31);
+  padding-top: 50px; 
 
 }
 </style>
