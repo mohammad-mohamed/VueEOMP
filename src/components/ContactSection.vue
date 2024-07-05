@@ -6,7 +6,7 @@
    <div class="contact-form-container mt-5">
    
    
-     <section class="contact-info col-md-6">
+     <section class="contact-info">
        <h2 class="contact-info-title" id="text-glow7">Contact Information</h2>
        <p class="contact-info-subtitle">Say something to start a live chat!</p>
        <div class="contact-info-phone">
@@ -51,7 +51,7 @@
        </div>
      </section>
    
-     <section class="formcarry-container col-md-6">
+     <section class="formcarry-container">
        <form action="https://formcarry.com/s/5BAGnwhvgiN" method="POST" enctype="multipart/form-data">
    
          <div class="formcarry-block">
@@ -479,6 +479,14 @@
    .contact-form-container {
    display: flex;
    flex-wrap: wrap;
+   /* display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) */
+   }
+   @media (max-width:300px){
+    .contact-form-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    }
    }
    
    .contact-info, .formcarry-container {

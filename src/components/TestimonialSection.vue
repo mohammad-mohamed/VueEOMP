@@ -8,7 +8,7 @@
           <img :src= testimonial.profile alt="" />
         </div>
         <div class="details">
-          <h1 class="testname1">{{testimonial.name}} {{testimonial.surname}}</h1>
+          <h2 class="testname1">{{testimonial.name}} {{testimonial.surname}}</h2>
           <div class="info">
             <p>
              {{testimonial.quotes}}
@@ -59,9 +59,14 @@
 }
 
 .testimonials h1 {
-  margin-top: 65px;
-  color: #8f1dd5;
-  text-shadow: 2px 1px 1px #070606;
+  background: linear-gradient(180deg, #9360ff 0%, #8f1dd5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 102%;
+  font-family: Poppins, sans-serif;
 }
 
 .testimon {

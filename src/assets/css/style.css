@@ -9,18 +9,24 @@ section {
     min-height: 100vh;
 }
 
-#app {
+/* #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color:  rgb(255, 255, 255) ;
-     background-color: black; /*Dark gray background */
-}
+     background-color: black; 
+} */
 
 .nav {
     padding: 30px;
 }
+
+
+.navbar-brand{
+  width: 50px;
+}
+
 
 nav a {
     font-weight: bold;
@@ -33,16 +39,50 @@ nav a.router-link-exact-active {
   
 .navlinks {
     text-decoration: none !important;
-}
-
-
+  }
+  
+  
 .navbar {
     background-color: black !important;
-}
-
+  }
+  
+.navbar {
+    box-shadow: 0px -20px 0px 20px rgb(9, 9, 9);
+    background-color: gray;
+    padding: 20px;
+  }
 .nav {
     background-color: black !important;
 }
+
+/* body {
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+.page-background {
+  background-color: black;
+  width: 100%;
+}
+
+.wrapper {
+  background-color: rgb(31, 31, 31);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  /* box-shadow: 0 0 0 10px black; */
+}
+
+/* Content section styles */
+section {
+  min-height: 100vh;
+}
+
+/* #home, #about, #project, #resume, #testimonial, #contact {
+  padding: 20px 0; 
+} */
 
 /* wrapper */
 
@@ -51,6 +91,12 @@ nav a.router-link-exact-active {
     grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
 
+@media (max-width:300px){
+  :is(.wrapper) {
+    display: grid;
+    grid-template-rows: none
+}
+}
 .lead {
     color: black;
     position: absolute;
@@ -128,89 +174,119 @@ margin-bottom: 120px;
 
 /* about me */
 .about-me-title {
-    background: linear-gradient(180deg, #9360ff 0%, #8f1dd5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-    font-size: 35px;
-    line-height: 102%;
-    font-family: Poppins, sans-serif;
-  }
-  
-  .about-me-description {
-    color: #c5c5c5;
-    letter-spacing: 0.36px;
-    font-weight: 300;
-    font-size: 18px;
-    font-family: Poppins, sans-serif;
-  }
+  background: linear-gradient(180deg, #9360ff 0%, #8f1dd5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 102%;
+  font-family: Poppins, sans-serif;
+}
 
-    
-    .about-me-actions {
-      font-size: 21px;
-      font-weight: 600;
-    }
-    
-    .about-me-contact-btn {
-      -webkit-text-stroke-width: 0.3246873915195465;
-      -webkit-text-stroke-color: #fff;
-      font-family: Poppins, sans-serif;
-      border: 1px solid #fff;
-      border-radius: 50px;
-      background: linear-gradient(0deg, #fff 0%, #fff 100%), #fff;
-      color: #161513;
-      justify-content: center;
-      padding: 24px 30px;
-    }
-    
-    .about-me-download-btn {
-      -webkit-text-stroke-width: 0.3246873915195465;
-      -webkit-text-stroke-color: #000;
-      font-family: Poppins, sans-serif;
-      border-radius: 50px;
-      border: 2px solid #fff;
-      color: #fff;
-      justify-content: center;
-      padding: 24px 28px;
-    }
+.about-me-description {
+  color: #c5c5c5;
+  letter-spacing: 0.36px;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  text-align: justify;
+}
 
-  #textss>p{
-    color: #c5c5c5;
+.about-me-details-label p,
+.about-me-details-value p {
+  color: #161513;
+  margin: 0;
+}
+
+.about-me-details-label {
+  text-align: left;
+}
+
+.about-me-details-value {
+  text-align: left;
+}
+
+.about-me-actions {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.about-me-contact-btn,
+.about-me-download-btn {
+  font-family: Poppins, sans-serif;
+  border-radius: 50px;
+  padding: 24px 30px;
+  text-align: center;
+  display: inline-block;
+  background: linear-gradient(0deg, #fff 0%, #fff 100%);
+  color: #161513;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.about-me-contact-btn:hover,
+.about-me-download-btn:hover {
+  animation: growShrink 0.5s infinite alternate;
+  color: #161513; 
+}
+
+@keyframes growShrink {
+  0% {
+    transform: scale(1);
+    color: #161513; 
+
   }
-  
-  
+  100% {
+    transform: scale(1.1);
+    color: #161513; 
+
+  }
+}
+
+/* #about {
+  margin-bottom: 120px;
+} */
+
+#textss p {
+  color: #c5c5c5;
+}
+
+@media (max-width: 768px) {
   .about-me-actions {
-    font-size: 21px;
-    font-weight: 600;
+    text-align: center;
   }
-  
-  .about-me-contact-btn {
-    -webkit-text-stroke-width: 0.3246873915195465;
-    -webkit-text-stroke-color: #fff;
-    font-family: Poppins, sans-serif;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    background: linear-gradient(0deg, #fff 0%, #fff 100%), #fff;
-    color: #161513;
-    justify-content: center;
-    padding: 24px 30px;
+}
+@media (max-width: 700px) {
+  .about-me-title {
+    font-size: 28px;
   }
-  
+  .about-me-description {
+    font-size: 16px;
+  }
+  .about-me-contact-btn,
   .about-me-download-btn {
-    -webkit-text-stroke-width: 0.3246873915195465;
-    -webkit-text-stroke-color: #000;
-    font-family: Poppins, sans-serif;
-    border-radius: 50px;
-    border: 2px solid #fff;
-    color: #fff;
-    justify-content: center;
-    padding: 24px 28px;
+    padding: 20px 25px;
+    font-size: 18px;
   }
-  
-  #about{
-    margin-bottom: 120px;
+}
+
+@media (max-width: 300px) {
+  .about-me-title {
+    font-size: 24px;
   }
+  .about-me-description {
+    font-size: 14px;
+  }
+  .about-me-contact-btn,
+  .about-me-download-btn {
+    padding: 18px 22px;
+    font-size: 16px;
+  }
+}
+
+
 
   /* education */
 
