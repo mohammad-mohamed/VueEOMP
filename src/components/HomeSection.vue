@@ -18,6 +18,17 @@
     </section>
         
 </template>
+<style scoped>
+@media (max-width:300px) {
+    #home{
+        height: 100vh;
+    }
+    
+}
+#home{
+    background-color: rgb(31, 31, 31);
+}
+</style>
 
 <script>
 </script>

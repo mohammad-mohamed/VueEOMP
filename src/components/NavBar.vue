@@ -38,13 +38,10 @@
                 <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#resume">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resume">Resume</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#testimonials">Testimonials</a>
@@ -64,9 +61,5 @@
   };
 </script>
 <style scoped>
-
-.navbar-brand{
-  width: 50px;
-}
 
 </style>

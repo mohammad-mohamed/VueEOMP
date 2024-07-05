@@ -61,6 +61,8 @@
     text-transform: uppercase;
   background: linear-gradient(90deg, #2df872 0%, #0fc000 100%);
   background-clip: text;
+  text-align: center;
+  position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font: 800 35px/102% Poppins, sans-serif;
