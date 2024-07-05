@@ -44,9 +44,9 @@
   }
   </script>
  <style scoped>
- .spacer {
+ /* .spacer {
   margin-bottom: 100px;
-}
+} */
 
 .testheader {
   font-size: 50px;

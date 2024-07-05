@@ -31,15 +31,19 @@
          <div class="contact-info-bottom-content">
            <div class="contact-info-bottom-left">
              <div class="contact-info-social-icons">
-               <img
-                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/66ea2ff0f2515af5a51b7f233b1f409d364b5f0df83ffedf8c136b50bc3d9bb9?apiKey=0bccd99636064f128fb65b1d52624404"
-                 alt="" class="contact-info-social-icon" />
-               <img
-                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bd43cfbebb909b8217c66a8c2ccd9270d0e362aeab1e6a2ef8ae68f1ba8ce3b?apiKey=0bccd99636064f128fb65b1d52624404"
-                 alt="" class="contact-info-social-icon" />
-               <img
-                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb81d9e3889282d2a223a859cf8071d4c31be8305c4258e539dca8a5efabc91c?apiKey=0bccd99636064f128fb65b1d52624404"
-                 alt="" class="contact-info-social-icon" />
+              <a href="https://www.instagram.com/mohammad_mhm16/" target="_blank">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bd43cfbebb909b8217c66a8c2ccd9270d0e362aeab1e6a2ef8ae68f1ba8ce3b?apiKey=0bccd99636064f128fb65b1d52624404"
+                  alt="" class="contact-info-social-icon" />
+              </a>
+              <a href="https://discordapp.com/users/520600574148870152" target="_blank">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb81d9e3889282d2a223a859cf8071d4c31be8305c4258e539dca8a5efabc91c?apiKey=0bccd99636064f128fb65b1d52624404"
+                  alt="" class="contact-info-social-icon" />
+              </a>
+              <a href="https://github.com/mohammad-mohamed" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+              </a>
              </div>
            </div>
            <div class="contact-info-bottom-right">
@@ -82,6 +86,12 @@
    
    
    <style>
+
+    .github-icon {
+      font-size: 1.5rem; /* Adjust icon size */
+      margin-left: 10px; /* Adjust spacing */
+      color: gray
+    }
    
    /* Contact */
        
@@ -494,9 +504,7 @@
    max-width: 50%;
    padding: 0 15px;
    }
-   #contact{
-     margin-bottom: 120px;
-   }
+
    
    
    </style>

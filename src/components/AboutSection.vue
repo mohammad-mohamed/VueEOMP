@@ -32,13 +32,15 @@
           </div>
           <div class="col-md-4">
             <div class="d-flex flex-column about-me-actions">
-              <button class="btn about-me-contact-btn mb-4">
-                <a class="nav-link" href="#contact">Get In Touch</a>
-              </button>
-              <button class="btn about-me-download-btn"><a href="https://mohammad-mohamed.github.io/hostedImages/images/Portfolio/Mohammad Mohamed CV.pdf" download target="_blank">Download CV</a></button>
-            </div>
+            <button class="btn about-me-contact-btn mb-4">
+              <a class="nav-link custom-link" href="#contact">Get In Touch</a>
+            </button>
+            <button class="btn about-me-download-btn">
+              <a class="custom-link" href="https://mohammad-mohamed.github.io/hostedImages/images/Portfolio/Mohammad Mohamed CV.pdf" download target="_blank">Download CV</a>
+            </button>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <section v-else>
@@ -64,6 +66,17 @@
   }
   </script>
   
-  <style scoped>
-  </style>
+<style scoped>
+.custom-link {
+  text-decoration: none;
+  color: inherit; /* This will inherit the color of the parent element */
+}
+
+.custom-link:hover,
+.custom-link:focus,
+.custom-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
   

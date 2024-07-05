@@ -2,12 +2,16 @@
   <section id="projects" v-if="$store.state.projects.length > 0">
     <div class="projects-heading-container">
       <button @click="prevSlide" class="carousel-control-btn">
-        <svg class="icon-prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <svg class="icon-prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
         <span class="visually-hidden">Previous</span>
       </button>
       <h2 class="projects-heading">Projects</h2>
       <button @click="nextSlide" class="carousel-control-btn">
-        <svg class="icon-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg class="icon-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
@@ -59,15 +63,17 @@
     </div>
   </section>
   <section v-else>
-    <SpinnerComp/>
+    <SpinnerComp />
   </section>
 </template>
+
 <script>
-import SpinnerComp from '@/components/SpinnerComp.vue'
+import SpinnerComp from '@/components/SpinnerComp.vue';
 import { Carousel } from 'bootstrap'; // Import Carousel from Bootstrap
+
 export default {
-  components:{
-    SpinnerComp
+  components: {
+    SpinnerComp,
   },
   computed: {
     getProjects() {
@@ -98,7 +104,7 @@ export default {
     },
   },
   mounted() {
-    this.getProjects
+    this.getProjects;
   },
 };
 </script>
@@ -109,15 +115,17 @@ export default {
   justify-content: center;
   gap: 20px;
 }
+
 .projects-heading {
   text-transform: uppercase;
   font: 800 35px/102% Poppins, sans-serif;
   background: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 50px; /* Adjusted margin-top */
-  margin-bottom: 50px; /* Adjusted margin-bottom */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
 .carousel-control-btn {
   background: none;
   border: none;
@@ -126,66 +134,71 @@ export default {
   transition: transform 0.3s ease, background-color 0.3s ease;
   border-radius: 50%;
 }
+
 .carousel-control-btn:hover {
   transform: scale(1.2);
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 .icon-prev,
 .icon-next {
   width: 40px;
   height: 40px;
-  stroke: url(#grad1);
-  stroke-width: 2;
-  background: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
-  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTguNDE5IDguNWwtMy41MTQgMy41MTMtLjcwOC0uNzA3TjUuMjk1IDguNWguMDAybDMuNTI5LTMuNTI5Ljc1NC43NTMtMy41MTUgMy41MTMgMy41MTUgMy41MTQtLjc1NC43NTQtMy41MjktMy41M2guMDAyTDguNDE5IDguNXpNOC41IDAuNTA3TDMuMDk1IDUuOTEyIDEuNjYxIDQuNDc3bDUuMzY3LTUuMzY2TDAgMEwxMCA1LjczIDguNSAwLjUwN3oiLz48L3N2Zz4=');
-  -webkit-mask-size: 60px;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
+  stroke: currentColor;
+  color: #D5491D;
 }
-.icon-next {
-  transform: rotate(180deg);
-}
+
+
+
 .projects-section {
   padding: 0 20px;
 }
+
 .projects-container {
   margin-top: 33px;
 }
+
 .project-thumbnail {
-  display: block; /* Ensures the image is displayed as a block element */
-  margin: 0 auto; /* Centers the image horizontally */
+  display: block;
+  margin: 0 auto;
   max-width: 20%;
   height: auto;
 }
-.carousel-inner_2 {
-  width: 100%; /* Changed width to 100% */
-  height: auto; /* Changed height to auto */
+
+.carousel-inner {
+  width: 100%;
+  height: auto;
 }
+
 .carousel-item {
-  text-align: center; /* Center content within carousel items */
+  text-align: center;
 }
+
 .carousel-caption {
-  background-color: rgba(255, 255, 255, 0.8); /* Added background color with transparency */
+  background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
-  width: 100%; /* Ensure caption spans the full width */
-  bottom: 0; /* Position the caption at the bottom */
-  left: 0; /* Align the caption to the left */
-  padding: 10px; /* Add padding to the caption */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
   font-size: medium;
   color: #161513;
 }
+
 .project-card {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
+
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
+
 .makeBig {
-  text-align: center; /* Center the image */
+  text-align: center;
 }
+
 .makeBig img {
-  width: 200%; /* Make the image 200% bigger */
-  /* height: auto; Maintain aspect ratio */
+  width: 200%;
 }
 </style>
