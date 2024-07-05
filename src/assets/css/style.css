@@ -5,24 +5,9 @@
     display: none;
 }
 
-/* Select all images */
-/* img {
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: center;
-} */
-
 section {
     min-height: 100vh;
 }
-
-
-/* logo */
-/* img[alt='logo'] {
-    width: 5rem;
-} */
-
-/* from appview */
 
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -46,17 +31,6 @@ nav a.router-link-exact-active {
     color: #42b983
 }
   
-/* .offcanvas-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-inline {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-} */
-
 .navlinks {
     text-decoration: none !important;
 }
@@ -69,8 +43,6 @@ nav a.router-link-exact-active {
 .nav {
     background-color: black !important;
 }
-
-
 
 /* wrapper */
 
@@ -85,8 +57,6 @@ nav a.router-link-exact-active {
 }
 
 /* section */
-
-
 
 /* media query */
 
@@ -109,8 +79,6 @@ body {
 .navbar-brand{
   width: 60px;
 }
-
-
 
 /* home */
 .gradient-text {
@@ -177,15 +145,7 @@ margin-bottom: 120px;
     font-size: 18px;
     font-family: Poppins, sans-serif;
   }
-  
-    /* .about-me-details-label,
-    .about-me-details-value {
-      color: #c5c5c5;
-      letter-spacing: 0.36px;
-      font-weight: 300;
-      font-size: 18px;
-      font-family: Poppins, sans-serif;
-    } */
+
     
     .about-me-actions {
       font-size: 21px;
@@ -214,35 +174,11 @@ margin-bottom: 120px;
       justify-content: center;
       padding: 24px 28px;
     }
-    /* @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    .typewriter {
-      display: inline-block;
-      overflow: hidden;
-      border-right: .15em solid gray;
-      white-space: nowrap;
-      margin: 0 auto;
-      padding: 0 10px;
-      animation: typing 5s steps(80, end), blink-caret .75s step-end infinite;
-    }
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: transparent }
-    } */
+
   #textss>p{
     color: #c5c5c5;
   }
   
-  /* .about-me-details-label,
-  .about-me-details-value {
-    color: #c5c5c5;
-    letter-spacing: 0.36px;
-    font-weight: 300;
-    font-size: 18px;
-    font-family: Poppins, sans-serif;
-  } */
   
   .about-me-actions {
     font-size: 21px;
