@@ -14,9 +14,6 @@
       <section id="resume">
         <ResumeSection/>
       </section>
-      <section id="testimonials">
-        <TestimonialSection/>
-      </section>
       <section id="contact">
         <ContactSection/>
       </section>
@@ -34,7 +31,6 @@ import FooterComp from '@/components/Footer.vue'
 import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
-import TestimonialSection from '@/components/TestimonialSection.vue'
 import ProjectSection from '@/components/ProjectSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 import SpinnerComp from '@/components/SpinnerComp.vue'
@@ -48,7 +44,6 @@ export default {
     HomeSection,
     AboutSection,
     ResumeSection,
-    TestimonialSection,
     ProjectSection,
     ContactSection,
     SpinnerComp
