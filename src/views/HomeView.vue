@@ -71,10 +71,6 @@ export default {
   background-color: rgb(31, 31, 31);
   padding-top: 50px
 }
-#testimonial{
-  background-color: rgb(31, 31, 31);
-  padding-top: 50px
-}
 #contact{
   background-color: rgb(31, 31, 31);
   padding-top: 50px; 

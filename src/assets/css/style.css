@@ -142,7 +142,7 @@ margin-bottom: 120px;
   white-space: nowrap;
   margin: 0 auto;
   padding: 0 10px;
-  width: 100%;
+  width: 50%;
   animation: typing 5s steps(80), cursor 0.4s step-end infinite alternate;
 }
 @keyframes cursor {

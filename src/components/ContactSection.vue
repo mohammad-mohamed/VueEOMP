@@ -506,6 +506,8 @@
    padding: 0 15px;
    }
 
-   
+   #contact{
+    margin-top: 100px;
+   }
    
    </style>
